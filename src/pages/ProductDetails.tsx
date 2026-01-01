@@ -1,5 +1,5 @@
 import React, { type JSX } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 type RouteParam = { productId: string };
 
@@ -9,6 +9,11 @@ const ProductDetailsPage: React.FC = (): JSX.Element => {
     <>
       <h1>Product Details!</h1>
       <p>{params.productId}</p>
+      <p>
+        <Link to=".." relative="path">
+          Back
+        </Link>
+      </p>
     </>
   );
 };

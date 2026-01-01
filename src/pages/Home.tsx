@@ -5,14 +5,14 @@ const HomePage: React.FC = (): JSX.Element => {
   const navigate = useNavigate();
 
   const navigateHandler = (): void => {
-    navigate("/products");
+    navigate("products");
   };
 
   return (
     <>
       <h1>My Home Page</h1>
       <p>
-        <Link to="/products">Go to Product Page</Link>
+        <Link to="products">Go to Product Page</Link>
       </p>
       <p>
         <button onClick={navigateHandler}>Navigate to Product Page</button>
