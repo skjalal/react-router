@@ -10,8 +10,9 @@ import {
 import HomePage from "./pages/Home.tsx";
 import ProductsPage from "./pages/Product.tsx";
 import RootLayout from "./pages/Root.tsx";
-import "./App.css";
 import ErrorPage from "./pages/Error.tsx";
+import ProductDetailsPage from "./pages/ProductDetails.tsx";
+import "./App.css";
 
 //Object based approach
 const routes: RouteObject[] = [
@@ -22,6 +23,7 @@ const routes: RouteObject[] = [
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
+      { path: "/products/:productId", element: <ProductDetailsPage /> },
     ],
   },
 ];
