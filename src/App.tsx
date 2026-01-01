@@ -9,12 +9,19 @@ import {
 
 import HomePage from "./pages/Home.tsx";
 import ProductsPage from "./pages/Product.tsx";
+import RootLayout from "./pages/Root.tsx";
 import "./App.css";
 
 //Object based approach
 const routes: RouteObject[] = [
-  { path: "/", element: <HomePage /> },
-  { path: "/products", element: <ProductsPage /> },
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/products", element: <ProductsPage /> },
+    ],
+  },
 ];
 
 //Element based approach
