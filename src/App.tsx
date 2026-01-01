@@ -4,6 +4,7 @@ import {
   RouterProvider,
   //Route,
   type DataRouter,
+  type DOMRouterOpts,
   type RouteObject,
 } from "react-router-dom";
 
@@ -36,7 +37,9 @@ const routes: RouteObject[] = [
 //   </Route>
 // );
 
-const router: DataRouter = createBrowserRouter(routes);
+const routesConfig: DOMRouterOpts = { basename: "/react-router" };
+
+const router: DataRouter = createBrowserRouter(routes, routesConfig);
 
 function App() {
   return <RouterProvider router={router} />;
